@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Secure Hub | Home</title>
+<style>
+    
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:linear-gradient(135deg,#090c10,#111827,#0a1124);
+  color:#eee;overflow-x:hidden;
+}
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 8%;background:rgba(10,10,20,0.95);
+  border-bottom:1px solid #00ffff55;position:sticky;top:0;
+  z-index:1000;backdrop-filter:blur(10px);
+}
+.logo{color:#00ffff;font-size:1.4rem;font-weight:700;text-transform:uppercase;}
+.nav-links{list-style:none;display:flex;gap:30px;transition:0.4s ease;}
+.nav-links li a{color:#ddd;text-decoration:none;position:relative;transition:color .3s;}
+.nav-links li a::after{
+  content:"";position:absolute;width:0%;height:2px;left:0;bottom:-5px;
+  background:#00ffff;transition:width .3s;
+}
+.nav-links li a:hover,.nav-links li a.active{color:#00ffff;}
+.nav-links li a:hover::after,.nav-links li a.active::after{width:100%;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.menu-toggle span{width:25px;height:3px;background:#00ffff;border-radius:3px;transition:.3s;}
+@media(max-width:850px){
+.nav-links{position:absolute;top:70px;right:-100%;flex-direction:column;
+background:rgba(10,10,20,0.98);width:200px;text-align:center;padding:20px 0;
+border-left:1px solid #00ffff33;}
+.nav-links.active{right:0;}
+.menu-toggle{display:flex;}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg) translateY(7px);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translateY(-7px);}
+}
+header,section,footer{text-align:center;padding:60px 10%;}
+header img{width:40%;border-radius:15px;box-shadow:0 0 15px #00ffff55;}
+header .intro{width:50%;text-align:left;display:inline-block;vertical-align:middle;padding:20px;}
+header h1{color:#00ffff;margin-bottom:10px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:20px;}
+.card{background:rgba(25,25,40,0.85);padding:25px;border-radius:15px;
+transition:.3s;box-shadow:0 0 12px rgba(0,255,255,0.2);}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 20px rgba(0,255,255,0.4);}
+footer{background:rgba(10,10,20,0.9);border-top:1px solid #00ffff44;padding:15px;color:#aaa;}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Cyber Secure Hub</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="tools.html">Tools</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<header>
+  <div class="intro">
+    <h1>Secure Your Digital Future</h1>
+    <p>At Cyber Secure Hub, we protect your digital world with cutting-edge cybersecurity services designed for both individuals and enterprises.</p>
+  </div>
+  <img src="cyber.jpeg" alt="Cyber Security">
+</header>
+
+<section>
+  <h2 style="color:#00ffff;">Why Our Services Are Best</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🧠 Expert Team</h3>
+      <p>Our cybersecurity professionals hold top industry certifications and have real-world experience handling advanced security threats.</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ Advanced Tools</h3>
+      <p>We utilize modern ethical hacking tools like Burp Suite, Nmap, Metasploit, and Wireshark for deep system analysis and protection.</p>
+    </div>
+    <div class="card">
+      <h3>🕓 24/7 Monitoring</h3>
+      <p>Our security experts continuously monitor your digital infrastructure to detect and prevent breaches before they happen.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Data Privacy First</h3>
+      <p>Your data is encrypted, secured, and never shared. We believe in absolute confidentiality and zero compromise on privacy.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Global Standards</h3>
+      <p>All our services comply with ISO, GDPR, and other global cybersecurity standards — ensuring world-class protection.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 Constant Innovation</h3>
+      <p>We evolve with new technologies — integrating AI-based threat detection, automation, and real-time response systems.</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <h2 style="color:#00ffff;">Tools We Use</h2>
+  <div class="cards">
+    <div class="card">Nmap</div>
+    <div class="card">Wireshark</div>
+    <div class="card">Burp Suite</div>
+  </div>
+</section>
+
+<section>
+  <h2 style="color:#00ffff;">Why Choose Us</h2>
+  <p style="margin-bottom:25px;">At <b>Cyber Secure Hub</b>, we don’t just protect your systems — we build digital confidence.  
+  Here’s why thousands of users trust our cybersecurity solutions.</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🧠 Certified Experts</h3>
+      <p>Our team is composed of <b>CEH, OSCP, and CISSP</b>-certified professionals who specialize in ethical hacking, penetration testing, and data defense.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Cutting-Edge Technology</h3>
+      <p>We integrate <b>AI-powered monitoring systems</b>, advanced encryption, and automated response frameworks to keep you ahead of cyber threats.</p>
+    </div>
+
+    <div class="card">
+      <h3>🕓 24/7 Real-Time Support</h3>
+      <p>Our security analysts are available round the clock to identify, mitigate, and eliminate any suspicious activity before it escalates.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔒 End-to-End Encryption</h3>
+      <p>We protect your sensitive information using <b>multi-layer encryption</b> and strict access control, ensuring your data stays safe and private.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌐 Global Security Standards</h3>
+      <p>We strictly adhere to <b>ISO 27001, NIST, and GDPR</b> standards, ensuring your organization meets international compliance requirements.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Constant Innovation</h3>
+      <p>Our R&D division continuously explores the latest in <b>threat intelligence</b> and security automation to deliver next-generation solutions.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧩 Customized Solutions</h3>
+      <p>We understand every client is unique — our solutions are <b>tailor-made</b> for your business size, industry, and digital infrastructure.</p>
+    </div>
+
+    <div class="card">
+      <h3>💼 Transparent Pricing</h3>
+      <p>No hidden fees, no surprises. We maintain <b>honest pricing</b> models with clear service deliverables and guaranteed satisfaction.</p>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Long-Term Partnership</h3>
+      <p>We build lasting relationships — not just one-time projects.  
+      Your growth, safety, and digital success are our top priorities.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<footer>© 2025 Cyber Secure Hub | Secure the Future</footer>

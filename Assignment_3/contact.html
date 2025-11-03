@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Secure Hub | Contact</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(135deg,#090c10,#111827,#0a1124);color:#eee;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;
+background:rgba(10,10,20,0.95);border-bottom:1px solid #00ffff55;position:sticky;top:0;
+z-index:1000;backdrop-filter:blur(10px);}
+.logo{color:#00ffff;font-size:1.4rem;font-weight:700;text-transform:uppercase;}
+.nav-links{list-style:none;display:flex;gap:30px;transition:0.4s ease;}
+.nav-links li a{color:#ddd;text-decoration:none;position:relative;transition:.3s;}
+.nav-links li a::after{content:"";position:absolute;width:0;height:2px;left:0;bottom:-5px;
+background:#00ffff;transition:.3s;}
+.nav-links li a:hover,.nav-links li a.active{color:#00ffff;}
+.nav-links li a:hover::after,.nav-links li a.active::after{width:100%;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.menu-toggle span{width:25px;height:3px;background:#00ffff;border-radius:3px;transition:.3s;}
+@media(max-width:850px){
+.nav-links{position:absolute;top:70px;right:-100%;flex-direction:column;
+background:rgba(10,10,20,0.98);width:200px;text-align:center;padding:20px 0;
+border-left:1px solid #00ffff33;}
+.nav-links.active{right:0;}
+.menu-toggle{display:flex;}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg) translateY(7px);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translateY(-7px);}
+}
+section{text-align:center;padding:60px 8%;}
+form{max-width:500px;margin:auto;background:rgba(25,25,40,0.85);padding:30px;border-radius:15px;
+box-shadow:0 0 15px rgba(0,255,255,0.2);}
+input,textarea{width:100%;padding:10px;margin:10px 0;background:#0d1320;color:#fff;border:1px solid #00ffff55;border-radius:8px;}
+input[type=submit]{background:#00ffff;color:#000;font-weight:600;border:none;cursor:pointer;transition:.3s;}
+input[type=submit]:hover{background:#00cccc;}
+footer{background:rgba(10,10,20,0.9);border-top:1px solid #00ffff44;padding:15px;color:#aaa;margin-top:30px;}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Cyber Secure Hub</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tools.html">Tools</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<section>
+<h2 style="color:#00ffff;">Contact Us</h2>
+<p>Have questions or need support? Get in touch with our cybersecurity experts below.</p>
+
+<form>
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea rows="5" placeholder="Your Message" required></textarea>
+  <input type="submit" value="Send Message">
+</form>
+</section>
+
+<footer>© 2025 Cyber Secure Hub | We’re here to help</footer>
+
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>{
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
+</script>
+</body>
+</html>

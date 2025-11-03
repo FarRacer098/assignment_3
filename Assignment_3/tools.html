@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Secure Hub | Tools</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(135deg,#090c10,#111827,#0a1124);color:#eee;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;
+background:rgba(10,10,20,0.95);border-bottom:1px solid #00ffff55;position:sticky;top:0;
+z-index:1000;backdrop-filter:blur(10px);}
+.logo{color:#00ffff;font-size:1.4rem;font-weight:700;text-transform:uppercase;}
+.nav-links{list-style:none;display:flex;gap:30px;transition:0.4s ease;}
+.nav-links li a{color:#ddd;text-decoration:none;position:relative;transition:.3s;}
+.nav-links li a::after{content:"";position:absolute;width:0;height:2px;left:0;bottom:-5px;
+background:#00ffff;transition:.3s;}
+.nav-links li a:hover,.nav-links li a.active{color:#00ffff;}
+.nav-links li a:hover::after,.nav-links li a.active::after{width:100%;}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.menu-toggle span{width:25px;height:3px;background:#00ffff;border-radius:3px;transition:.3s;}
+@media(max-width:850px){
+.nav-links{position:absolute;top:70px;right:-100%;flex-direction:column;
+background:rgba(10,10,20,0.98);width:200px;text-align:center;padding:20px 0;
+border-left:1px solid #00ffff33;}
+.nav-links.active{right:0;}
+.menu-toggle{display:flex;}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg) translateY(7px);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translateY(-7px);}
+}
+section{text-align:center;padding:60px 8%;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:rgba(25,25,40,0.85);border-radius:15px;padding:20px;box-shadow:0 0 12px rgba(0,255,255,.2);
+transition:.3s;}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 20px rgba(0,255,255,.4);}
+.card img{width:100%;border-radius:10px;margin-bottom:10px;}
+footer{background:rgba(10,10,20,0.9);border-top:1px solid #00ffff44;padding:15px;color:#aaa;}
+.price{color:#00ffff;font-weight:bold;}
+.desc{font-size:14px;color:#ccc;margin-top:8px;}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Cyber Secure Hub</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tools.html" class="active">Tools</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<section>
+<h2 style="color:#00ffff; margin-bottom:30px;">Cybersecurity Tools We Use</h2>
+<div class="cards">
+  <div class="card"><img src="nmap.jpeg"><h3>Nmap</h3><p class="desc">Powerful network scanner for discovering devices and services.</p><p class="price">$49</p></div>
+  <div class="card"><img src="wireshark.jpeg"><h3>Wireshark</h3><p class="desc">Captures and analyzes network traffic for troubleshooting.</p><p class="price">$99</p></div>
+  <div class="card"><img src="burpsuite.jpeg"><h3>Burp Suite</h3><p class="desc">Web vulnerability scanner and proxy tool for penetration testers.</p><p class="price">$399</p></div>
+  <div class="card"><img src="metaspolit.jpeg"><h3>Metasploit</h3><p class="desc">Framework for developing and executing exploit code.</p><p class="price">$250</p></div>
+  <div class="card"><img src="air_ng.jpeg"><h3>Aircrack-ng</h3><p class="desc">Wireless network security testing suite.</p><p class="price">$99</p></div>
+  <div class="card"><img src="john.jpeg"><h3>John The Ripper</h3><p class="desc">Fast password cracking tool for testing password strength.</p><p class="price">$29</p></div>
+  <div class="card"><img src="hydra..jpeg"><h3>Hydra</h3><p class="desc">Brute force login cracker for multiple protocols.</p><p class="price">$45</p></div>
+  <div class="card"><img src="sql.jpeg"><h3>SQLMap</h3><p class="desc">Automated SQL Injection detection and exploitation tool.</p><p class="price">$39</p></div>
+  <div class="card"><img src="kali.jpeg"><h3>Kali Linux</h3><p class="desc">Complete penetration testing OS with hundreds of tools.</p><p class="price">$60</p></div>
+  <div class="card"><img src="nessus.jpeg"><h3>Nessus</h3><p class="desc">Vulnerability scanner trusted by enterprises globally.</p><p class="price">$290</p></div>
+</div>
+<p style="margin-top:30px;">Want more tools? <a href="#" style="color:#00ffff;">Click here</a>.</p>
+</section>
+
+<footer>© 2025 Cyber Secure Hub | Tools for a Safer Web</footer>
+
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>{
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
+</script>
+</body>
+</html>
